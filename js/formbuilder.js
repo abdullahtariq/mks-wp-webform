@@ -149,7 +149,7 @@ var mainView = {
         catch(e){}
         if($("#sfEntity").val()!=="N"){
                // $("#salesforce_checkbox").iCheck('check');
-                $("select[name='salesforce']").val(($("#sfEntity").val()=="L")?"1":"2");
+                $("select[name='salesforce']").val(($("#sfEntity").val()=="L")?"1":"2").trigger("chosen:updated");
                 $("select[name='salesforce']").attr("disabled",false);               
                 //mainView.loadSalesEntitiesLink();                
             }
